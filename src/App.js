@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Checkout from "./Checkout";
+import Clothes from "./Clothes";
+import Header from "./Header";
 import Home from "./Home";
+import Hoodies from "./Hoodies";
 import Login from "./Login";
 import { actionTypes } from "./reducer";
 import { useStateValue } from "./StateProvider";
@@ -30,8 +34,19 @@ function App() {
             <WinterC />
           </Route>
           <Route path="/login">
-            {" "}
-            <Login />{" "}
+            <Login />
+          </Route>
+          <Route path="/t-shirts">
+            <WinterC />
+          </Route>
+          <Route path="/hoodies">
+            <Hoodies />
+          </Route>
+          <Route path="/clothes">
+            <Clothes />
+          </Route>
+          <Route path="/checkout">
+            <Checkout />
           </Route>
           <Route exact path="/">
             {!User ? <Login /> : <Home />}

@@ -6,7 +6,6 @@ import { actionTypes } from "./reducer";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import "./Login.css";
 import { makeStyles } from "@material-ui/core/styles";
-import { red } from "@material-ui/core/colors";
 import { useHistory } from "react-router-dom";
 
 //styles

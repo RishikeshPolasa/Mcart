@@ -4,7 +4,7 @@ import { useStateValue } from "./StateProvider";
 import "./Header.css";
 import { auth } from "./firebase";
 function Header() {
-  const [{ user }] = useStateValue();
+  const [{ user, basket }] = useStateValue();
   const signOut = () => {
     if (user) {
       localStorage.setItem("user", null);
@@ -40,7 +40,7 @@ function Header() {
         </Link>
         <Link to="/checkout" className="link">
           <div className="header__option">
-            <h6>Shopping bag{0}</h6>
+            <h6>Shopping bag ({basket?.length})</h6>
           </div>
         </Link>
       </div>
