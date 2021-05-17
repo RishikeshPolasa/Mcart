@@ -7,6 +7,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import "./Login.css";
 import { makeStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
+import { useHistory } from "react-router-dom";
 
 //styles
 const useStyles = makeStyles({
@@ -34,6 +35,7 @@ const useStyles = makeStyles({
 });
 function Login() {
   const [state, dispatch] = useStateValue();
+  const history = useHistory();
 
   const handleOnClick = async (provider) => {
     await auth
@@ -44,6 +46,7 @@ function Login() {
           user: res.user,
         });
         localStorage.setItem("user", JSON.stringify(res.user));
+        history.push("/");
       })
       .catch((err) => alert(err.message));
     //
