@@ -1,0 +1,23 @@
+.favourite {
+  text-align: center;
+}
+.favourite > div > h1 {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 40px;
+  padding-top: 30px;
+}
+.favourite > div > h2 {
+  font-size: 20px;
+  padding-top: 80px;
+  font-weight: 600;
+}
+.favourite > div > p {
+  margin: auto;
+  width: 500px;
+  padding-top: 15px;
+  /* border: 1px solid red; */
+}
+.favourite__title {
+  padding-bottom: 20px;
+}

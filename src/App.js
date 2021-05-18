@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Checkout from "./Checkout";
 import Clothes from "./Clothes";
+import Favourites from "./Favourites";
 import Header from "./Header";
 import Home from "./Home";
 import Hoodies from "./Hoodies";
@@ -47,6 +48,9 @@ function App() {
           </Route>
           <Route path="/checkout">
             <Checkout />
+          </Route>
+          <Route path="/favourites">
+            <Favourites />
           </Route>
           <Route exact path="/">
             {!User ? <Login /> : <Home />}

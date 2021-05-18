@@ -26,11 +26,39 @@ const useStyles = makeStyles({
 
 export default function Product(props) {
   const [{}, dispatch] = useStateValue();
-  const { img, discount, productName, productPrice, id } = props;
+  const { img, discount, productName, productPrice, id, isLiked, cloth } =
+    props;
   const [flag, setFlag] = useState(true);
   const classes = useStyles();
   const change = () => {
     setFlag(!flag);
+    {
+      !isLiked
+        ? dispatch({
+            type: "ADD_TO_FAVOURITE",
+            item: {
+              id: id,
+              productName: productName,
+              image: img,
+              productPrice: productPrice,
+              discount: discount,
+              isLiked,
+              cloth,
+            },
+          })
+        : dispatch({
+            type: "REMOVE_FROM_FAVOURITE",
+            item: {
+              id: id,
+              productName: productName,
+              image: img,
+              productPrice: productPrice,
+              discount: discount,
+              isLiked,
+              cloth,
+            },
+          });
+    }
   };
 
   const addToBag = () => {
@@ -52,7 +80,7 @@ export default function Product(props) {
       <span className="off">{discount}</span>
       <FavoriteBorderIcon
         onClick={change}
-        className={flag ? classes.heart : classes.colored}
+        className={!isLiked ? classes.heart : classes.colored}
       />
       <h6 className="shirt-name">{productName}</h6>
       <span className="price">Rs.{productPrice}</span>

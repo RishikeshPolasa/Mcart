@@ -10,6 +10,9 @@
   padding-bottom: 10px;
   padding-left: 38px;
 }
+.shirt {
+  padding-bottom: 10px;
+}
 .shirt > img {
   padding-left: 20px;
   width: 300px;
