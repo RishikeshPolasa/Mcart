@@ -1,9 +1,10 @@
 .checkoutProduct {
   width: 800px;
   height: 180px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: relative;
   left: 80px;
+  top: 10px;
 }
 .checkoutProduct > img {
   width: 150px;
