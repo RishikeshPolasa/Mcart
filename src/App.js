@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Checkout from "./Checkout";
 import Clothes from "./Clothes";
+import EmailVerify from "./EmailVerify";
 import Favourites from "./Favourites";
 import Header from "./Header";
 import Home from "./Home";
@@ -51,6 +52,9 @@ function App() {
           </Route>
           <Route path="/favourites">
             <Favourites />
+          </Route>
+          <Route path="/emailVerification">
+            <EmailVerify />
           </Route>
           <Route exact path="/">
             {!User ? <Login /> : <Home />}

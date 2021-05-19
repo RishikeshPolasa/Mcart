@@ -7,7 +7,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import "./Login.css";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 //styles
 const useStyles = makeStyles({
@@ -19,6 +19,8 @@ const useStyles = makeStyles({
       background: "white",
       color: "red",
     },
+    position: "relative",
+    top: "100px",
   },
   facebook: {
     color: "white",
@@ -28,6 +30,8 @@ const useStyles = makeStyles({
       color: "blue",
     },
     margin: "0px 10px 0px 0px",
+    position: "relative",
+    top: "100px",
   },
   FacebookIcon: {
     padding: "0px 0px 0px 5px",
@@ -69,6 +73,9 @@ function Login() {
           Facebook
           <FacebookIcon className={classes.FacebookIcon} />
         </Button>
+        <Link className="email" to="/emailVerification">
+          Verify using Email-OTP
+        </Link>
       </div>
     </div>
   );

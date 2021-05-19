@@ -3,6 +3,7 @@
   justify-content: space-evenly;
   align-items: center;
   padding-top: 120px;
+  background-color: #faf9f8;
 }
 .link > img {
   width: 350px;

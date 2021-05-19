@@ -1,6 +1,7 @@
 .checkout {
   display: flex;
   justify-content: space-between;
+  background-color: #faf9f8;
 }
 .checkout__right {
   position: relative;

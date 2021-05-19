@@ -50,9 +50,9 @@ function FavouriteProduct(props) {
       <img src={image} alt="t-shirt" />
       <span className="off">{discount}</span>
       <DeleteOutlineIcon onClick={change} className={classes.delete} />
-      <h6 className="shirt-name">{productName}</h6>
-      <span className="price">Rs.{productPrice}</span>
-      <h6 className="buy" onClick={addToBag}>
+      <h6 className="Fav-shirt-name">{productName}</h6>
+      <span className="Fav-price">Rs.{productPrice}</span>
+      <h6 className="Fav-buy" onClick={addToBag}>
         Add
       </h6>
     </div>

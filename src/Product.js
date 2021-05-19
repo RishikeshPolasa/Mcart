@@ -28,10 +28,10 @@ export default function Product(props) {
   const [{}, dispatch] = useStateValue();
   const { img, discount, productName, productPrice, id, isLiked, cloth } =
     props;
-  const [flag, setFlag] = useState(true);
+  // const [flag, setFlag] = useState(true);
   const classes = useStyles();
   const change = () => {
-    setFlag(!flag);
+    // setFlag(!flag);
     {
       !isLiked
         ? dispatch({

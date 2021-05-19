@@ -13,5 +13,6 @@ const db = firebaseApp.firestore(); //realtime db
 const auth = firebase.auth(); //for login or signin
 const googleProvider = new firebase.auth.GoogleAuthProvider(); //signin into the app using multiple authentications providers
 const facebookProvider = new firebase.auth.FacebookAuthProvider();
+
 export { auth, googleProvider, facebookProvider };
 export default db;
