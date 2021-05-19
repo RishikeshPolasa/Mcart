@@ -187,7 +187,7 @@ const reducer = (state, action) => {
     case "ADD_TO_FAVOURITE":
       let key = "";
       let newProducts = [];
-      console.log(action.item.cloth);
+      // console.log(action.item.cloth);
       if (action.item.cloth === "new") {
         newProducts = state.clothes.map((product) => {
           if (product.id === action.item.id) {
@@ -199,7 +199,7 @@ const reducer = (state, action) => {
           return product;
         });
         key = "clothes";
-        console.log(newProducts);
+        // console.log(newProducts);
       } else if (action.item.cloth === "t-shirt") {
         newProducts = state.winterc.map((product) => {
           if (product.id === action.item.id) {
@@ -210,7 +210,7 @@ const reducer = (state, action) => {
           }
           return product;
         });
-        console.log(newProducts);
+        // console.log(newProducts);
         key = "winterc";
       } else if (action.item.cloth === "hoodie") {
         newProducts = state.hoodies.map((product) => {
@@ -222,7 +222,7 @@ const reducer = (state, action) => {
           }
           return product;
         });
-        console.log(newProducts);
+        // console.log(newProducts);
         key = "hoodies";
       }
       return {

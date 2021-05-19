@@ -107,7 +107,7 @@ function EmailVerify() {
           <input type="hidden" name="message" placeholder="Message" />
           <input
             type="submit"
-            value="send message"
+            value="send otp"
             className="input_button"
             onClick={() => setFounduser(true)}
           />
